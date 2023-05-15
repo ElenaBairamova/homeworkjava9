@@ -6,7 +6,7 @@ public class RadioTest {
 
     @Test
     public void shouldSetRadioStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentNumberRadio(6);
         ;
         int expected = 6;
@@ -17,7 +17,7 @@ public class RadioTest {
 
     @Test
     public void shouldSwitchToNextRadioStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentNumberRadio(6);
         radio.nextRadio();
         int expected = 7;
@@ -28,7 +28,7 @@ public class RadioTest {
 
     @Test
     public void shouldSwitchToNullRadioStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentNumberRadio(9);
         radio.nextRadio();
         int expected = 0;
@@ -39,7 +39,7 @@ public class RadioTest {
 
     @Test
     public void shouldSwitchToPrevRadioStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentNumberRadio(4);
         radio.prevRadio();
         int expected = 3;
@@ -50,7 +50,7 @@ public class RadioTest {
 
     @Test
     public void shouldSwitchToNineRadioStation() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentNumberRadio(0);
         radio.prevRadio();
         int expected = 9;
@@ -61,7 +61,7 @@ public class RadioTest {
 
     @Test
     public void shouldIncreaseVolume() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentVolume(6);
         radio.increaseVolume();
         int expected = 7;
@@ -71,7 +71,7 @@ public class RadioTest {
 
     @Test
     public void shouldVolume100() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentVolume(100);
         radio.increaseVolume();
         int expected = 100;
@@ -81,7 +81,7 @@ public class RadioTest {
 
     @Test
     public void shouldDecreaseVolume() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentVolume(100);
         radio.decreaseVolume();
         int expected = 99;
@@ -91,7 +91,7 @@ public class RadioTest {
 
     @Test
     public void shouldVolumeNull() {
-        Radio radio = new Radio();
+        Radio radio = new Radio(10);
         radio.setCurrentVolume(0);
         radio.decreaseVolume();
         int expected = 0;

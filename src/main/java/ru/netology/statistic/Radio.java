@@ -1,6 +1,13 @@
 package ru.netology.statistic;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.swing.plaf.PanelUI;
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 
 public class Radio {
     public int currentRadioStation;
@@ -11,23 +18,12 @@ public class Radio {
     private int maxVolume = 100;
     private int RadioStation = 10;
 
-    public Radio() {
-    }
-
     public Radio(int RadioStation) {
         this.RadioStation = RadioStation;
     }
 
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
     public void setCurrentNumberRadio(int newCurrentRadioStation) {
         currentRadioStation = newCurrentRadioStation;
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
     }
 
     public void setCurrentVolume(int newCurrentVolume) {
